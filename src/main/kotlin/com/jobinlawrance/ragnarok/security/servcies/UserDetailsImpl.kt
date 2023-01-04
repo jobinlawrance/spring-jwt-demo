@@ -54,7 +54,7 @@ class UserDetailsImpl(
         private const val serialVersionUID = 1L
         fun build(user: User): UserDetailsImpl {
             val authorities: List<GrantedAuthority> = user.roles.stream()
-                .map { role -> SimpleGrantedAuthority(role.eRole.name) }
+                .map { role -> SimpleGrantedAuthority(role.name.name) }
                 .collect(Collectors.toList())
             return UserDetailsImpl(
                 user.id,

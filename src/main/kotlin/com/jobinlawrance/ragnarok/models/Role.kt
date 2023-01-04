@@ -11,10 +11,10 @@ class Role {
 
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
-    lateinit var eRole: ERole
+    lateinit var name: ERole
 
     constructor()
     constructor(name: ERole) {
-        this.eRole = name
+        this.name = name
     }
 }
